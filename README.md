@@ -20,7 +20,7 @@
 
 ## How To Use
 
-If you want to try this project on your PYNQ-Z2 Board, please follow the following steps.\n
+If you want to try this project on your PYNQ-Z2 board, please follow the following steps.
 1. Download all the [Files](https://github.com/BournousouzisChristos/Audio-Effect-Box/tree/master/Files) folder
 2. Place the entire Files folder in your Jupyter Notebook environnement on the board
 3. Run the run.py file to flash your board
