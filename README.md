@@ -7,7 +7,11 @@
 - [References](#references)
 
 ## Description
-
+This repository is about how to make an audio effect box using the PYNQ-Z2 board from Xilinx.  
+PYNQ-Z2 Development Board is based on the Xilinx Zynq XC7Z020 System on Chip (SoC).  
+The PYNQ-Z2 is designed to support PYNQ, an open-source framework that enables embedded programmers to explore the possibilities of Xilinx Zynq SoCs without having to design programming logic circuits. Benefiting from programmable logic and the advanced Arm processor in Zynq, designers can build up powerful embedded applications.  
+The SoCs can be programmed in Python and the code can be developed and tested directly on the PYNQ-Z2. The programmable logic circuits are imported as hardware libraries and programmed through APIs in basically the same way that the software libraries are imported and programmed.  
+About the audio effect box, you can see below a simple schema of it and for further information check the [Design](#design) section.
 ![image](https://user-images.githubusercontent.com/81763732/113724296-80145400-96f2-11eb-9c25-6d4f3da6c618.png)
 
 
