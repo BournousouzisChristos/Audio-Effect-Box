@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Tue Apr  6 15:23:37 2021
+--Date        : Thu Apr  8 15:49:58 2021
 --Host        : DESKTOP-RGK2DGP running 64-bit major release  (build 9200)
 --Command     : generate_target Audio_Effect_Box.bd
 --Design      : Audio_Effect_Box
@@ -1074,7 +1074,12 @@ entity Audio_Effect_Box is
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    au_bclk_r : out STD_LOGIC;
+    au_din_r : in STD_LOGIC;
+    au_dout_r : out STD_LOGIC;
+    au_mclk_r : out STD_LOGIC;
+    au_wclk_r : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
   attribute CORE_GENERATION_INFO of Audio_Effect_Box : entity is "Audio_Effect_Box,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Audio_Effect_Box,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=11,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_clkrst_cnt=11,da_ps7_cnt=2,synth_mode=OOC_per_IP}";
@@ -1253,6 +1258,8 @@ architecture STRUCTURE of Audio_Effect_Box is
   signal i2s_receiver_0_m_axis_aud_TID : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal i2s_receiver_0_m_axis_aud_TREADY : STD_LOGIC;
   signal i2s_receiver_0_m_axis_aud_TVALID : STD_LOGIC;
+  signal i2s_receiver_0_sclk_out : STD_LOGIC;
+  signal i2s_transmitter_0_sdata_0_out : STD_LOGIC;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -1349,13 +1356,12 @@ architecture STRUCTURE of Audio_Effect_Box is
   signal ps7_0_axi_periph_M01_AXI_WVALID : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_50M_peripheral_reset : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal sdata_0_in_0_1 : STD_LOGIC;
   signal NLW_i2s_receiver_0_irq_UNCONNECTED : STD_LOGIC;
   signal NLW_i2s_receiver_0_lrclk_out_UNCONNECTED : STD_LOGIC;
-  signal NLW_i2s_receiver_0_sclk_out_UNCONNECTED : STD_LOGIC;
   signal NLW_i2s_transmitter_0_irq_UNCONNECTED : STD_LOGIC;
   signal NLW_i2s_transmitter_0_lrclk_out_UNCONNECTED : STD_LOGIC;
   signal NLW_i2s_transmitter_0_sclk_out_UNCONNECTED : STD_LOGIC;
-  signal NLW_i2s_transmitter_0_sdata_0_out_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_VBUS_PWRSELECT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_PORT_INDCTL_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_rst_ps7_0_100M_mb_reset_UNCONNECTED : STD_LOGIC;
@@ -1392,6 +1398,11 @@ architecture STRUCTURE of Audio_Effect_Box is
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
+  au_bclk_r <= i2s_receiver_0_sclk_out;
+  au_dout_r <= i2s_transmitter_0_sdata_0_out;
+  au_mclk_r <= processing_system7_0_FCLK_CLK1;
+  au_wclk_r <= processing_system7_0_FCLK_CLK1;
+  sdata_0_in_0_1 <= au_din_r;
 i2s_receiver_0: component Audio_Effect_Box_i2s_receiver_0_1
      port map (
       aud_mclk => processing_system7_0_FCLK_CLK1,
@@ -1422,8 +1433,8 @@ i2s_receiver_0: component Audio_Effect_Box_i2s_receiver_0_1
       s_axi_ctrl_wdata(31 downto 0) => ps7_0_axi_periph_M00_AXI_WDATA(31 downto 0),
       s_axi_ctrl_wready => ps7_0_axi_periph_M00_AXI_WREADY,
       s_axi_ctrl_wvalid => ps7_0_axi_periph_M00_AXI_WVALID(0),
-      sclk_out => NLW_i2s_receiver_0_sclk_out_UNCONNECTED,
-      sdata_0_in => '0'
+      sclk_out => i2s_receiver_0_sclk_out,
+      sdata_0_in => sdata_0_in_0_1
     );
 i2s_transmitter_0: component Audio_Effect_Box_i2s_transmitter_0_1
      port map (
@@ -1456,7 +1467,7 @@ i2s_transmitter_0: component Audio_Effect_Box_i2s_transmitter_0_1
       s_axis_aud_tready => i2s_receiver_0_m_axis_aud_TREADY,
       s_axis_aud_tvalid => i2s_receiver_0_m_axis_aud_TVALID,
       sclk_out => NLW_i2s_transmitter_0_sclk_out_UNCONNECTED,
-      sdata_0_out => NLW_i2s_transmitter_0_sdata_0_out_UNCONNECTED
+      sdata_0_out => i2s_transmitter_0_sdata_0_out
     );
 processing_system7_0: component Audio_Effect_Box_processing_system7_0_0
      port map (

@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Tue Apr  6 15:23:37 2021
+--Date        : Thu Apr  8 15:49:58 2021
 --Host        : DESKTOP-RGK2DGP running 64-bit major release  (build 9200)
 --Command     : generate_target Audio_Effect_Box_wrapper.bd
 --Design      : Audio_Effect_Box_wrapper
@@ -33,7 +33,12 @@ entity Audio_Effect_Box_wrapper is
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    au_bclk_r : out STD_LOGIC;
+    au_din_r : in STD_LOGIC;
+    au_dout_r : out STD_LOGIC;
+    au_mclk_r : out STD_LOGIC;
+    au_wclk_r : out STD_LOGIC
   );
 end Audio_Effect_Box_wrapper;
 
@@ -60,7 +65,12 @@ architecture STRUCTURE of Audio_Effect_Box_wrapper is
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC
+    FIXED_IO_ps_porb : inout STD_LOGIC;
+    au_dout_r : out STD_LOGIC;
+    au_din_r : in STD_LOGIC;
+    au_bclk_r : out STD_LOGIC;
+    au_wclk_r : out STD_LOGIC;
+    au_mclk_r : out STD_LOGIC
   );
   end component Audio_Effect_Box;
 begin
@@ -86,6 +96,11 @@ Audio_Effect_Box_i: component Audio_Effect_Box
       FIXED_IO_mio(53 downto 0) => FIXED_IO_mio(53 downto 0),
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
-      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb
+      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      au_bclk_r => au_bclk_r,
+      au_din_r => au_din_r,
+      au_dout_r => au_dout_r,
+      au_mclk_r => au_mclk_r,
+      au_wclk_r => au_wclk_r
     );
 end STRUCTURE;

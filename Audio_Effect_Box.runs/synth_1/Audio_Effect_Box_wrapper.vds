@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Apr  6 15:25:14 2021
-# Process ID: 22208
+# Start of session at: Thu Apr  8 15:50:03 2021
+# Process ID: 8212
 # Current directory: C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1
 # Command line: vivado.exe -log Audio_Effect_Box_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Audio_Effect_Box_wrapper.tcl
 # Log file: C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/Audio_Effect_Box_wrapper.vds
@@ -20,50 +20,50 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7932
+INFO: [Synth 8-7075] Helper process launched with PID 20584
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1130.543 ; gain = 10.414
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1140.102 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_wrapper' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/hdl/Audio_Effect_Box_wrapper.vhd:40]
-INFO: [Synth 8-3491] module 'Audio_Effect_Box' declared at 'c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1055' bound to instance 'Audio_Effect_Box_i' of component 'Audio_Effect_Box' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/hdl/Audio_Effect_Box_wrapper.vhd:67]
-INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1085]
-INFO: [Synth 8-3491] module 'Audio_Effect_Box_i2s_receiver_0_1' declared at 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-22208-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_i2s_receiver_0_1_stub.vhdl:5' bound to instance 'i2s_receiver_0' of component 'Audio_Effect_Box_i2s_receiver_0_1' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1395]
-INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_i2s_receiver_0_1' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-22208-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_i2s_receiver_0_1_stub.vhdl:41]
-INFO: [Synth 8-3491] module 'Audio_Effect_Box_i2s_transmitter_0_1' declared at 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-22208-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_i2s_transmitter_0_1_stub.vhdl:5' bound to instance 'i2s_transmitter_0' of component 'Audio_Effect_Box_i2s_transmitter_0_1' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1428]
-INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_i2s_transmitter_0_1' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-22208-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_i2s_transmitter_0_1_stub.vhdl:41]
-INFO: [Synth 8-3491] module 'Audio_Effect_Box_processing_system7_0_0' declared at 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-22208-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'Audio_Effect_Box_processing_system7_0_0' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1461]
-INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_processing_system7_0_0' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-22208-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_processing_system7_0_0_stub.vhdl:77]
+INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_wrapper' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/hdl/Audio_Effect_Box_wrapper.vhd:45]
+INFO: [Synth 8-3491] module 'Audio_Effect_Box' declared at 'c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1055' bound to instance 'Audio_Effect_Box_i' of component 'Audio_Effect_Box' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/hdl/Audio_Effect_Box_wrapper.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1090]
+INFO: [Synth 8-3491] module 'Audio_Effect_Box_i2s_receiver_0_1' declared at 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-8212-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_i2s_receiver_0_1_stub.vhdl:5' bound to instance 'i2s_receiver_0' of component 'Audio_Effect_Box_i2s_receiver_0_1' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1406]
+INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_i2s_receiver_0_1' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-8212-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_i2s_receiver_0_1_stub.vhdl:41]
+INFO: [Synth 8-3491] module 'Audio_Effect_Box_i2s_transmitter_0_1' declared at 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-8212-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_i2s_transmitter_0_1_stub.vhdl:5' bound to instance 'i2s_transmitter_0' of component 'Audio_Effect_Box_i2s_transmitter_0_1' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1439]
+INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_i2s_transmitter_0_1' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-8212-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_i2s_transmitter_0_1_stub.vhdl:41]
+INFO: [Synth 8-3491] module 'Audio_Effect_Box_processing_system7_0_0' declared at 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-8212-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'Audio_Effect_Box_processing_system7_0_0' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1472]
+INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_processing_system7_0_0' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-8212-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_processing_system7_0_0_stub.vhdl:77]
 INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_ps7_0_axi_periph_2' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:605]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_3FGXID' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:55]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_3FGXID' (1#1) [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:55]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1T9X0KY' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:151]
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1T9X0KY' (2#1) [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:151]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_8MAEVN' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:272]
-INFO: [Synth 8-3491] module 'Audio_Effect_Box_auto_pc_0' declared at 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-22208-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'Audio_Effect_Box_auto_pc_0' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:455]
-INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_auto_pc_0' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-22208-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-3491] module 'Audio_Effect_Box_auto_pc_0' declared at 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-8212-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'Audio_Effect_Box_auto_pc_0' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:455]
+INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_auto_pc_0' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-8212-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_auto_pc_0_stub.vhdl:70]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_8MAEVN' (3#1) [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:272]
-INFO: [Synth 8-3491] module 'Audio_Effect_Box_xbar_0' declared at 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-22208-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'Audio_Effect_Box_xbar_0' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:991]
-INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_xbar_0' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-22208-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'Audio_Effect_Box_xbar_0' declared at 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-8212-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'Audio_Effect_Box_xbar_0' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:991]
+INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_xbar_0' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-8212-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_xbar_0_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'Audio_Effect_Box_ps7_0_axi_periph_2' (4#1) [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:605]
-INFO: [Synth 8-3491] module 'Audio_Effect_Box_rst_ps7_0_100M_2' declared at 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-22208-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_rst_ps7_0_100M_2_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'Audio_Effect_Box_rst_ps7_0_100M_2' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1611]
-INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_rst_ps7_0_100M_2' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-22208-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_rst_ps7_0_100M_2_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'Audio_Effect_Box_rst_ps7_0_50M_1' declared at 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-22208-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_rst_ps7_0_50M_1_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'Audio_Effect_Box_rst_ps7_0_50M_1' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1624]
-INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_rst_ps7_0_50M_1' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-22208-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_rst_ps7_0_50M_1_stub.vhdl:21]
-INFO: [Synth 8-256] done synthesizing module 'Audio_Effect_Box' (5#1) [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1085]
-INFO: [Synth 8-256] done synthesizing module 'Audio_Effect_Box_wrapper' (6#1) [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/hdl/Audio_Effect_Box_wrapper.vhd:40]
+INFO: [Synth 8-3491] module 'Audio_Effect_Box_rst_ps7_0_100M_2' declared at 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-8212-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_rst_ps7_0_100M_2_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'Audio_Effect_Box_rst_ps7_0_100M_2' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1622]
+INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_rst_ps7_0_100M_2' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-8212-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_rst_ps7_0_100M_2_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'Audio_Effect_Box_rst_ps7_0_50M_1' declared at 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-8212-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_rst_ps7_0_50M_1_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'Audio_Effect_Box_rst_ps7_0_50M_1' [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1635]
+INFO: [Synth 8-638] synthesizing module 'Audio_Effect_Box_rst_ps7_0_50M_1' [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/.Xil/Vivado-8212-DESKTOP-RGK2DGP/realtime/Audio_Effect_Box_rst_ps7_0_50M_1_stub.vhdl:21]
+INFO: [Synth 8-256] done synthesizing module 'Audio_Effect_Box' (5#1) [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/synth/Audio_Effect_Box.vhd:1090]
+INFO: [Synth 8-256] done synthesizing module 'Audio_Effect_Box_wrapper' (6#1) [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/hdl/Audio_Effect_Box_wrapper.vhd:45]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1190.945 ; gain = 70.816
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1190.371 ; gain = 50.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1190.945 ; gain = 70.816
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1190.371 ; gain = 50.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1190.945 ; gain = 70.816
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1190.371 ; gain = 50.270
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1190.945 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1190.371 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -83,28 +83,27 @@ Finished Parsing XDC File [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audi
 Parsing XDC File [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_rst_ps7_0_50M_1/Audio_Effect_Box_rst_ps7_0_50M_1/Audio_Effect_Box_rst_ps7_0_50M_1_in_context.xdc] for cell 'Audio_Effect_Box_i/rst_ps7_0_50M'
 Finished Parsing XDC File [c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_rst_ps7_0_50M_1/Audio_Effect_Box_rst_ps7_0_50M_1/Audio_Effect_Box_rst_ps7_0_50M_1_in_context.xdc] for cell 'Audio_Effect_Box_i/rst_ps7_0_50M'
 Parsing XDC File [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/PYNQ-Z2_C.xdc]
-WARNING: [Vivado 12-584] No ports matched 'ledone'. [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/PYNQ-Z2_C.xdc:27]
-WARNING: [Vivado 12-584] No ports matched 'ledtwo'. [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/PYNQ-Z2_C.xdc:28]
 Finished Parsing XDC File [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/PYNQ-Z2_C.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/PYNQ-Z2_C.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Audio_Effect_Box_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/PYNQ-Z2_C.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Audio_Effect_Box_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Audio_Effect_Box_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1221.008 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1226.531 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1221.008 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1226.531 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1221.008 ; gain = 100.879
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1226.531 ; gain = 86.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1221.008 ; gain = 100.879
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1226.531 ; gain = 86.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -379,10 +378,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for Audio_Effect_Box_i/ps7_0_axi_peri
 Applied set_property KEEP_HIERARCHY = SOFT for Audio_Effect_Box_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Audio_Effect_Box_i/rst_ps7_0_50M. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1221.008 ; gain = 100.879
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1226.531 ; gain = 86.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1221.008 ; gain = 100.879
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1226.531 ; gain = 86.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -404,25 +403,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1221.008 ; gain = 100.879
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1226.531 ; gain = 86.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1262.785 ; gain = 142.656
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1265.895 ; gain = 125.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1263.086 ; gain = 142.957
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1266.266 ; gain = 126.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1282.148 ; gain = 162.020
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1285.324 ; gain = 145.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -440,37 +439,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1288.914 ; gain = 168.785
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1291.094 ; gain = 150.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1288.914 ; gain = 168.785
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1291.094 ; gain = 150.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1288.914 ; gain = 168.785
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1291.094 ; gain = 150.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1288.914 ; gain = 168.785
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1291.094 ; gain = 150.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1288.914 ; gain = 168.785
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1291.094 ; gain = 150.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1288.914 ; gain = 168.785
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1291.094 ; gain = 150.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -500,25 +499,27 @@ Report Cell Usage:
 |5     |Audio_Effect_Box_rst_ps7_0_100M_2_bbox       |     1|
 |6     |Audio_Effect_Box_rst_ps7_0_50M_1_bbox        |     1|
 |7     |Audio_Effect_Box_xbar_0_bbox                 |     1|
+|8     |IBUF                                         |     1|
+|9     |OBUF                                         |     4|
 +------+---------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1288.914 ; gain = 168.785
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1291.094 ; gain = 150.992
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1288.914 ; gain = 138.723
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1288.914 ; gain = 168.785
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1291.094 ; gain = 114.832
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1291.094 ; gain = 150.992
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1288.914 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1303.156 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1307.031 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1308.316 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-42 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+43 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 1312.035 ; gain = 191.906
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1308.316 ; gain = 168.215
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.runs/synth_1/Audio_Effect_Box_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Audio_Effect_Box_wrapper_utilization_synth.rpt -pb Audio_Effect_Box_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr  6 15:25:47 2021...
+INFO: [Common 17-206] Exiting Vivado at Thu Apr  8 15:50:36 2021...

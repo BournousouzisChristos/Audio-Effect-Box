@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -87,19 +88,19 @@ set_property ip_output_repo c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Aud
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/hdl/Audio_Effect_Box_wrapper.vhd
+read_vhdl -library xil_defaultlib C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/hdl/Audio_Effect_Box_wrapper.vhd
 add_files C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.srcs/sources_1/bd/Audio_Effect_Box/Audio_Effect_Box.bd
 set_property used_in_implementation false [get_files -all c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_processing_system7_0_0/Audio_Effect_Box_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_i2s_receiver_0_1/Audio_Effect_Box_i2s_receiver_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_i2s_transmitter_0_1/Audio_Effect_Box_i2s_transmitter_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_xbar_0/Audio_Effect_Box_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_auto_pc_0/Audio_Effect_Box_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_rst_ps7_0_100M_2/Audio_Effect_Box_rst_ps7_0_100M_2_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_rst_ps7_0_100M_2/Audio_Effect_Box_rst_ps7_0_100M_2.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_rst_ps7_0_100M_2/Audio_Effect_Box_rst_ps7_0_100M_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_rst_ps7_0_50M_1/Audio_Effect_Box_rst_ps7_0_50M_1_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_rst_ps7_0_50M_1/Audio_Effect_Box_rst_ps7_0_50M_1.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_rst_ps7_0_50M_1/Audio_Effect_Box_rst_ps7_0_50M_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_auto_pc_0/Audio_Effect_Box_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/Audio_Effect_Box_ooc.xdc]
 
 OPTRACE "Adding files" END { }
