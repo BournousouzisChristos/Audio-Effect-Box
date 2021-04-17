@@ -89,7 +89,7 @@ set_property ip_output_repo c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Aud
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.srcs/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_xbar_0/Audio_Effect_Box_xbar_0.xci
+read_ip -quiet C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.srcs/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_xbar_0/Audio_Effect_Box_xbar_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_xbar_0/Audio_Effect_Box_xbar_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }

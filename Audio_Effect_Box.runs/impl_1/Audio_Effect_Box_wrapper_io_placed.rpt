@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date                      : Thu Apr  8 15:51:30 2021
+| Date                      : Sat Apr 17 13:40:43 2021
 | Host                      : DESKTOP-RGK2DGP running 64-bit major release  (build 9200)
 | Command                   : report_io -file Audio_Effect_Box_wrapper_io_placed.rpt
 | Design                    : Audio_Effect_Box_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           135 |
+|           137 |
 +---------------+
 
 
@@ -343,7 +343,7 @@ Table of Contents
 | T6         |                   |            | RSVDVCC1                | Reserved    |                   |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T7         |                   |            | GND                     | GND         |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | T8         |                   | High Range | VCCO_13                 | VCCO        |                   |      13 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
-| T9         |                   | High Range | IO_L12P_T1_MRCC_13      | User IO     |                   |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| T9         | audio_i2c_sda_io  | High Range | IO_L12P_T1_MRCC_13      | BIDIR       | LVCMOS33          |      13 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | T10        |                   | High Range | IO_L1N_T0_34            | User IO     |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T11        |                   | High Range | IO_L1P_T0_34            | User IO     |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T12        |                   | High Range | IO_L2P_T0_34            | User IO     |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
@@ -363,7 +363,7 @@ Table of Contents
 | U6         |                   |            | GND                     | GND         |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | U7         |                   | High Range | IO_L11P_T1_SRCC_13      | User IO     |                   |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | U8         |                   | High Range | IO_L17N_T2_13           | User IO     |                   |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| U9         |                   | High Range | IO_L17P_T2_13           | User IO     |                   |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| U9         | audio_i2c_scl_io  | High Range | IO_L17P_T2_13           | BIDIR       | LVCMOS33          |      13 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | U10        |                   | High Range | IO_L12N_T1_MRCC_13      | User IO     |                   |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | U11        |                   | High Range | VCCO_13                 | VCCO        |                   |      13 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | U12        |                   | High Range | IO_L2N_T0_34            | User IO     |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

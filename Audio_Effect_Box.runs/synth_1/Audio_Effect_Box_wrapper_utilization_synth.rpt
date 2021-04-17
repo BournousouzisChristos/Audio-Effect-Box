@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Apr  8 15:50:36 2021
+| Date         : Sat Apr 17 13:39:49 2021
 | Host         : DESKTOP-RGK2DGP running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Audio_Effect_Box_wrapper_utilization_synth.rpt -pb Audio_Effect_Box_wrapper_utilization_synth.pb
 | Design       : Audio_Effect_Box_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    5 |     0 |       125 |  4.00 |
+| Bonded IOB                  |    7 |     0 |       125 |  5.60 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -147,7 +147,8 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | OBUF     |    4 |                  IO |
-| IBUF     |    1 |                  IO |
+| IBUF     |    3 |                  IO |
+| OBUFT    |    2 |                  IO |
 +----------+------+---------------------+
 
 
@@ -158,11 +159,11 @@ Table of Contents
 |                 Ref Name                | Used |
 +-----------------------------------------+------+
 | Audio_Effect_Box_xbar_0                 |    1 |
-| Audio_Effect_Box_rst_ps7_0_50M_1        |    1 |
 | Audio_Effect_Box_rst_ps7_0_100M_2       |    1 |
 | Audio_Effect_Box_processing_system7_0_0 |    1 |
 | Audio_Effect_Box_i2s_transmitter_0_1    |    1 |
 | Audio_Effect_Box_i2s_receiver_0_1       |    1 |
+| Audio_Effect_Box_axi_iic_0_0            |    1 |
 | Audio_Effect_Box_auto_pc_0              |    1 |
 +-----------------------------------------+------+
 

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Apr  8 15:51:59 2021
+| Date         : Sat Apr 17 13:41:13 2021
 | Host         : DESKTOP-RGK2DGP running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Audio_Effect_Box_wrapper_methodology_drc_routed.rpt -pb Audio_Effect_Box_wrapper_methodology_drc_routed.pb -rpx Audio_Effect_Box_wrapper_methodology_drc_routed.rpx
 | Design       : Audio_Effect_Box_wrapper
@@ -23,28 +23,43 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 3
+             Violations found: 6
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 3          |
+| TIMING-18 | Warning  | Missing input or output delay | 6          |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 TIMING-18#1 Warning
 Missing input or output delay  
-An input delay is missing on au_din_r relative to clock(s) clk_fpga_1
+An input delay is missing on au_din_r relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An output delay is missing on au_bclk_r relative to clock(s) clk_fpga_1
+An input delay is missing on audio_i2c_scl_io relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An output delay is missing on au_dout_r relative to clock(s) clk_fpga_1
+An input delay is missing on audio_i2c_sda_io relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on au_bclk_r relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on au_dout_r relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An output delay is missing on au_wclk_r relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 

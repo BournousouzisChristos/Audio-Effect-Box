@@ -160,6 +160,8 @@ proc create_root_design { parentCell } {
 
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
+  set audio_i2c [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 audio_i2c ]
+
 
   # Create ports
   set au_bclk_r [ create_bd_port -dir O au_bclk_r ]
@@ -168,6 +170,13 @@ proc create_root_design { parentCell } {
   set au_mclk_r [ create_bd_port -dir O au_mclk_r ]
   set au_wclk_r [ create_bd_port -dir O au_wclk_r ]
 
+  # Create instance: axi_iic_0, and set properties
+  set axi_iic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_iic:2.0 axi_iic_0 ]
+  set_property -dict [ list \
+   CONFIG.IIC_BOARD_INTERFACE {audio_i2c} \
+   CONFIG.USE_BOARD_FLOW {true} \
+ ] $axi_iic_0
+
   # Create instance: i2s_receiver_0, and set properties
   set i2s_receiver_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:i2s_receiver:1.0 i2s_receiver_0 ]
 
@@ -175,6 +184,7 @@ proc create_root_design { parentCell } {
   set i2s_transmitter_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:i2s_transmitter:1.0 i2s_transmitter_0 ]
   set_property -dict [ list \
    CONFIG.C_32BIT_LR {0} \
+   CONFIG.C_IS_MASTER {0} \
  ] $i2s_transmitter_0
 
   # Create instance: processing_system7_0, and set properties
@@ -980,34 +990,35 @@ proc create_root_design { parentCell } {
   # Create instance: ps7_0_axi_periph, and set properties
   set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {2} \
+   CONFIG.NUM_MI {3} \
  ] $ps7_0_axi_periph
 
   # Create instance: rst_ps7_0_100M, and set properties
   set rst_ps7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_100M ]
 
-  # Create instance: rst_ps7_0_50M, and set properties
-  set rst_ps7_0_50M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_50M ]
-
   # Create interface connections
+  connect_bd_intf_net -intf_net axi_iic_0_IIC [get_bd_intf_ports audio_i2c] [get_bd_intf_pins axi_iic_0/IIC]
   connect_bd_intf_net -intf_net i2s_receiver_0_m_axis_aud [get_bd_intf_pins i2s_receiver_0/m_axis_aud] [get_bd_intf_pins i2s_transmitter_0/s_axis_aud]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins i2s_receiver_0/s_axi_ctrl] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins i2s_transmitter_0/s_axi_ctrl] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins axi_iic_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M02_AXI]
 
   # Create port connections
-  connect_bd_net -net i2s_receiver_0_sclk_out [get_bd_ports au_bclk_r] [get_bd_pins i2s_receiver_0/sclk_out]
+  connect_bd_net -net i2s_receiver_0_lrclk_out [get_bd_ports au_wclk_r] [get_bd_pins i2s_receiver_0/lrclk_out] [get_bd_pins i2s_transmitter_0/lrclk_in]
+  connect_bd_net -net i2s_receiver_0_sclk_out [get_bd_ports au_bclk_r] [get_bd_pins i2s_receiver_0/sclk_out] [get_bd_pins i2s_transmitter_0/sclk_in]
   connect_bd_net -net i2s_transmitter_0_sdata_0_out [get_bd_ports au_dout_r] [get_bd_pins i2s_transmitter_0/sdata_0_out]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins i2s_receiver_0/m_axis_aud_aclk] [get_bd_pins i2s_receiver_0/s_axi_ctrl_aclk] [get_bd_pins i2s_transmitter_0/s_axi_ctrl_aclk] [get_bd_pins i2s_transmitter_0/s_axis_aud_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
-  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_ports au_mclk_r] [get_bd_ports au_wclk_r] [get_bd_pins i2s_receiver_0/aud_mclk] [get_bd_pins i2s_transmitter_0/aud_mclk] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
-  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
-  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins i2s_receiver_0/m_axis_aud_aresetn] [get_bd_pins i2s_receiver_0/s_axi_ctrl_aresetn] [get_bd_pins i2s_transmitter_0/s_axi_ctrl_aresetn] [get_bd_pins i2s_transmitter_0/s_axis_aud_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
-  connect_bd_net -net rst_ps7_0_50M_peripheral_reset [get_bd_pins i2s_receiver_0/aud_mrst] [get_bd_pins i2s_transmitter_0/aud_mrst] [get_bd_pins rst_ps7_0_50M/peripheral_reset]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_iic_0/s_axi_aclk] [get_bd_pins i2s_receiver_0/aud_mclk] [get_bd_pins i2s_receiver_0/m_axis_aud_aclk] [get_bd_pins i2s_receiver_0/s_axi_ctrl_aclk] [get_bd_pins i2s_transmitter_0/aud_mclk] [get_bd_pins i2s_transmitter_0/s_axi_ctrl_aclk] [get_bd_pins i2s_transmitter_0/s_axis_aud_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_ports au_mclk_r] [get_bd_pins processing_system7_0/FCLK_CLK1]
+  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
+  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_iic_0/s_axi_aresetn] [get_bd_pins i2s_receiver_0/m_axis_aud_aresetn] [get_bd_pins i2s_receiver_0/s_axi_ctrl_aresetn] [get_bd_pins i2s_transmitter_0/s_axi_ctrl_aresetn] [get_bd_pins i2s_transmitter_0/s_axis_aud_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+  connect_bd_net -net rst_ps7_0_50M_peripheral_reset [get_bd_pins i2s_receiver_0/aud_mrst] [get_bd_pins i2s_transmitter_0/aud_mrst] [get_bd_pins rst_ps7_0_100M/peripheral_reset]
   connect_bd_net -net sdata_0_in_0_1 [get_bd_ports au_din_r] [get_bd_pins i2s_receiver_0/sdata_0_in]
 
   # Create address segments
+  assign_bd_address -offset 0x41600000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_iic_0/S_AXI/Reg] -force
   assign_bd_address -offset 0x43C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs i2s_receiver_0/s_axi_ctrl/Reg] -force
   assign_bd_address -offset 0x43C10000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs i2s_transmitter_0/s_axi_ctrl/Reg] -force
 

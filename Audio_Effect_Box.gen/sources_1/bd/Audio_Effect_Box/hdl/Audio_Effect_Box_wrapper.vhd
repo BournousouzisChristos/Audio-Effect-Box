@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Thu Apr  8 15:49:58 2021
+--Date        : Sat Apr 17 13:38:11 2021
 --Host        : DESKTOP-RGK2DGP running 64-bit major release  (build 9200)
 --Command     : generate_target Audio_Effect_Box_wrapper.bd
 --Design      : Audio_Effect_Box_wrapper
@@ -38,13 +38,20 @@ entity Audio_Effect_Box_wrapper is
     au_din_r : in STD_LOGIC;
     au_dout_r : out STD_LOGIC;
     au_mclk_r : out STD_LOGIC;
-    au_wclk_r : out STD_LOGIC
+    au_wclk_r : out STD_LOGIC;
+    audio_i2c_scl_io : inout STD_LOGIC;
+    audio_i2c_sda_io : inout STD_LOGIC
   );
 end Audio_Effect_Box_wrapper;
 
 architecture STRUCTURE of Audio_Effect_Box_wrapper is
   component Audio_Effect_Box is
   port (
+    au_dout_r : out STD_LOGIC;
+    au_din_r : in STD_LOGIC;
+    au_bclk_r : out STD_LOGIC;
+    au_mclk_r : out STD_LOGIC;
+    au_wclk_r : out STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -66,13 +73,28 @@ architecture STRUCTURE of Audio_Effect_Box_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    au_dout_r : out STD_LOGIC;
-    au_din_r : in STD_LOGIC;
-    au_bclk_r : out STD_LOGIC;
-    au_wclk_r : out STD_LOGIC;
-    au_mclk_r : out STD_LOGIC
+    audio_i2c_scl_i : in STD_LOGIC;
+    audio_i2c_scl_o : out STD_LOGIC;
+    audio_i2c_scl_t : out STD_LOGIC;
+    audio_i2c_sda_i : in STD_LOGIC;
+    audio_i2c_sda_o : out STD_LOGIC;
+    audio_i2c_sda_t : out STD_LOGIC
   );
   end component Audio_Effect_Box;
+  component IOBUF is
+  port (
+    I : in STD_LOGIC;
+    O : out STD_LOGIC;
+    T : in STD_LOGIC;
+    IO : inout STD_LOGIC
+  );
+  end component IOBUF;
+  signal audio_i2c_scl_i : STD_LOGIC;
+  signal audio_i2c_scl_o : STD_LOGIC;
+  signal audio_i2c_scl_t : STD_LOGIC;
+  signal audio_i2c_sda_i : STD_LOGIC;
+  signal audio_i2c_sda_o : STD_LOGIC;
+  signal audio_i2c_sda_t : STD_LOGIC;
 begin
 Audio_Effect_Box_i: component Audio_Effect_Box
      port map (
@@ -101,6 +123,26 @@ Audio_Effect_Box_i: component Audio_Effect_Box
       au_din_r => au_din_r,
       au_dout_r => au_dout_r,
       au_mclk_r => au_mclk_r,
-      au_wclk_r => au_wclk_r
+      au_wclk_r => au_wclk_r,
+      audio_i2c_scl_i => audio_i2c_scl_i,
+      audio_i2c_scl_o => audio_i2c_scl_o,
+      audio_i2c_scl_t => audio_i2c_scl_t,
+      audio_i2c_sda_i => audio_i2c_sda_i,
+      audio_i2c_sda_o => audio_i2c_sda_o,
+      audio_i2c_sda_t => audio_i2c_sda_t
+    );
+audio_i2c_scl_iobuf: component IOBUF
+     port map (
+      I => audio_i2c_scl_o,
+      IO => audio_i2c_scl_io,
+      O => audio_i2c_scl_i,
+      T => audio_i2c_scl_t
+    );
+audio_i2c_sda_iobuf: component IOBUF
+     port map (
+      I => audio_i2c_sda_o,
+      IO => audio_i2c_sda_io,
+      O => audio_i2c_sda_i,
+      T => audio_i2c_sda_t
     );
 end STRUCTURE;

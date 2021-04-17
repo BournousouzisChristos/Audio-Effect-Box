@@ -77,8 +77,8 @@ module Audio_Effect_Box_i2s_transmitter_0_1 (
   s_axi_ctrl_rdata,
   s_axi_ctrl_rresp,
   irq,
-  lrclk_out,
-  sclk_out,
+  lrclk_in,
+  sclk_in,
   sdata_0_out,
   s_axis_aud_tdata,
   s_axis_aud_tid,
@@ -92,7 +92,7 @@ input wire s_axi_ctrl_aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_ctrl_aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 s_axi_ctrl_aresetn RST" *)
 input wire s_axi_ctrl_aresetn;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aud_mclk, ASSOCIATED_RESET aud_mrst, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN Audio_Effect_Box_processing_system7_0_0_FCLK_CLK1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aud_mclk, ASSOCIATED_RESET aud_mrst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN Audio_Effect_Box_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 aud_mclk CLK" *)
 input wire aud_mclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aud_mrst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
@@ -141,8 +141,8 @@ output wire [1 : 0] s_axi_ctrl_rresp;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME irq, SENSITIVITY LEVEL_HIGH, PortWidth 1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 irq INTERRUPT" *)
 output wire irq;
-output wire lrclk_out;
-output wire sclk_out;
+input wire lrclk_in;
+input wire sclk_in;
 output wire sdata_0_out;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_aud TDATA" *)
 input wire [31 : 0] s_axis_aud_tdata;
@@ -155,7 +155,7 @@ input wire s_axis_aud_tvalid;
 output wire s_axis_aud_tready;
 
   i2s_transmitter_v1_0_4 #(
-    .C_IS_MASTER(1),
+    .C_IS_MASTER(0),
     .C_NUM_CHANNELS(1),
     .C_DWIDTH(24),
     .C_32BIT_LR(0),
@@ -184,10 +184,10 @@ output wire s_axis_aud_tready;
     .s_axi_ctrl_rdata(s_axi_ctrl_rdata),
     .s_axi_ctrl_rresp(s_axi_ctrl_rresp),
     .irq(irq),
-    .lrclk_out(lrclk_out),
-    .sclk_out(sclk_out),
-    .lrclk_in(1'B0),
-    .sclk_in(1'B0),
+    .lrclk_out(),
+    .sclk_out(),
+    .lrclk_in(lrclk_in),
+    .sclk_in(sclk_in),
     .sdata_0_out(sdata_0_out),
     .sdata_1_out(),
     .sdata_2_out(),

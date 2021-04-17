@@ -24,8 +24,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Audio_Effec
 # IP: bd/Audio_Effect_Box/ip/Audio_Effect_Box_rst_ps7_0_100M_2/Audio_Effect_Box_rst_ps7_0_100M_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Audio_Effect_Box_rst_ps7_0_100M_2 || ORIG_REF_NAME==Audio_Effect_Box_rst_ps7_0_100M_2} -quiet] -quiet
 
-# IP: bd/Audio_Effect_Box/ip/Audio_Effect_Box_rst_ps7_0_50M_1/Audio_Effect_Box_rst_ps7_0_50M_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Audio_Effect_Box_rst_ps7_0_50M_1 || ORIG_REF_NAME==Audio_Effect_Box_rst_ps7_0_50M_1} -quiet] -quiet
+# IP: bd/Audio_Effect_Box/ip/Audio_Effect_Box_axi_iic_0_0/Audio_Effect_Box_axi_iic_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Audio_Effect_Box_axi_iic_0_0 || ORIG_REF_NAME==Audio_Effect_Box_axi_iic_0_0} -quiet] -quiet
 
 # IP: bd/Audio_Effect_Box/ip/Audio_Effect_Box_auto_pc_0/Audio_Effect_Box_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Audio_Effect_Box_auto_pc_0 || ORIG_REF_NAME==Audio_Effect_Box_auto_pc_0} -quiet] -quiet

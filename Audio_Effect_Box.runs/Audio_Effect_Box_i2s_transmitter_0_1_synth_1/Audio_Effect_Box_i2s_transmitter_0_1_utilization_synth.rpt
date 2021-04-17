@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Tue Apr  6 15:25:09 2021
+| Date         : Sat Apr 17 13:39:07 2021
 | Host         : DESKTOP-RGK2DGP running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Audio_Effect_Box_i2s_transmitter_0_1_utilization_synth.rpt -pb Audio_Effect_Box_i2s_transmitter_0_1_utilization_synth.pb
 | Design       : Audio_Effect_Box_i2s_transmitter_0_1
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  647 |     0 |     53200 |  1.22 |
-|   LUT as Logic          |  647 |     0 |     53200 |  1.22 |
+| Slice LUTs*             |  611 |     0 |     53200 |  1.15 |
+|   LUT as Logic          |  611 |     0 |     53200 |  1.15 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         | 1754 |     0 |    106400 |  1.65 |
-|   Register as Flip Flop | 1754 |     0 |    106400 |  1.65 |
+| Slice Registers         | 1728 |     0 |    106400 |  1.62 |
+|   Register as Flip Flop | 1728 |     0 |    106400 |  1.62 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 2     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 19    |          Yes |         Set |            - |
-| 1733  |          Yes |       Reset |            - |
+| 1707  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -147,15 +147,15 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 1733 |        Flop & Latch |
-| LUT6     |  266 |                 LUT |
-| LUT4     |  141 |                 LUT |
-| LUT2     |  119 |                 LUT |
-| LUT3     |  118 |                 LUT |
-| LUT5     |   96 |                 LUT |
-| CARRY4   |   40 |          CarryLogic |
+| FDRE     | 1707 |        Flop & Latch |
+| LUT6     |  290 |                 LUT |
+| LUT2     |  127 |                 LUT |
+| LUT3     |   96 |                 LUT |
+| LUT5     |   87 |                 LUT |
+| LUT4     |   84 |                 LUT |
+| CARRY4   |   30 |          CarryLogic |
 | FDSE     |   19 |        Flop & Latch |
-| LUT1     |   11 |                 LUT |
+| LUT1     |    9 |                 LUT |
 | FDPE     |    2 |        Flop & Latch |
 | RAMB18E1 |    1 |        Block Memory |
 +----------+------+---------------------+

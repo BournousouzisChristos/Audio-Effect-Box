@@ -1,6 +1,10 @@
 set_property SRC_FILE_INFO {cfile:C:/Users/Quinaux/Desktop/Projet/Audio-Effect-Box/PYNQ-Z2_C.xdc rfile:../../../PYNQ-Z2_C.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:66 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN U5    IOSTANDARD LVCMOS33 } [get_ports { au_mclk_r }]; #IO_L19N_T3_VREF_13 Sch=au_mclk_r
+set_property src_info {type:XDC file:1 line:67 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN T9    IOSTANDARD LVCMOS33 } [get_ports { au_sda_r  }]; #IO_L12P_T1_MRCC_13 Sch=au_sda_r
+set_property src_info {type:XDC file:1 line:68 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN U9    IOSTANDARD LVCMOS33 } [get_ports { au_scl_r  }]; #IO_L17P_T2_13 Sch= au_scl_r
 set_property src_info {type:XDC file:1 line:69 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN F17   IOSTANDARD LVCMOS33 } [get_ports { au_dout_r }]; #IO_L6N_T0_VREF_35 Sch=au_dout_r
 set_property src_info {type:XDC file:1 line:70 export:INPUT save:INPUT read:READ} [current_design]
