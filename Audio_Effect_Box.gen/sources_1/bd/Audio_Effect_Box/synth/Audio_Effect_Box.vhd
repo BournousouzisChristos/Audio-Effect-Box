@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Sat Apr 17 13:38:11 2021
---Host        : DESKTOP-RGK2DGP running 64-bit major release  (build 9200)
+--Date        : Wed Apr 21 18:32:15 2021
+--Host        : LAPTOP-97RQG6MA running 64-bit major release  (build 9200)
 --Command     : generate_target Audio_Effect_Box.bd
 --Design      : Audio_Effect_Box
 --Purpose     : IP block netlist
