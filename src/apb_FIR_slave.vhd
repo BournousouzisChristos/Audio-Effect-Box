@@ -46,6 +46,7 @@ begin
 
 enb <= s_apb_gp0_penable and s_apb_gp0_pwrite and s_apb_gp0_psel;
 web <= s_apb_gp0_pwrite;
+addrb <= s_apb_gp0_paddr;
 dob <= s_apb_gp0_pwdata;
 
 end architecture;
