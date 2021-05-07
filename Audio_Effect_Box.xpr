@@ -75,29 +75,50 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PPRDIR/src/apb_FIR_slave.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/src/ram_tdp_rf_rf.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/src/FIR.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/bd/Audio_Effect_Box/Audio_Effect_Box.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="Audio_Effect_Box.bd" FileRelPathName="ip/Audio_Effect_Box_i2s_receiver_0_1/Audio_Effect_Box_i2s_receiver_0_1.xci">
-          <Proxy FileSetName="Audio_Effect_Box_i2s_receiver_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Audio_Effect_Box.bd" FileRelPathName="ip/Audio_Effect_Box_i2s_transmitter_0_1/Audio_Effect_Box_i2s_transmitter_0_1.xci">
-          <Proxy FileSetName="Audio_Effect_Box_i2s_transmitter_0_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Audio_Effect_Box.bd" FileRelPathName="ip/Audio_Effect_Box_xbar_0/Audio_Effect_Box_xbar_0.xci">
           <Proxy FileSetName="Audio_Effect_Box_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Audio_Effect_Box.bd" FileRelPathName="ip/Audio_Effect_Box_processing_system7_0_0/Audio_Effect_Box_processing_system7_0_0.xci">
-          <Proxy FileSetName="Audio_Effect_Box_processing_system7_0_0"/>
+        <CompFileExtendedInfo CompFileName="Audio_Effect_Box.bd" FileRelPathName="ip/Audio_Effect_Box_i2s_receiver_0_1/Audio_Effect_Box_i2s_receiver_0_1.xci">
+          <Proxy FileSetName="Audio_Effect_Box_i2s_receiver_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Audio_Effect_Box.bd" FileRelPathName="ip/Audio_Effect_Box_rst_ps7_0_100M_2/Audio_Effect_Box_rst_ps7_0_100M_2.xci">
+          <Proxy FileSetName="Audio_Effect_Box_rst_ps7_0_100M_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Audio_Effect_Box.bd" FileRelPathName="ip/Audio_Effect_Box_axi_iic_0_0/Audio_Effect_Box_axi_iic_0_0.xci">
           <Proxy FileSetName="Audio_Effect_Box_axi_iic_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Audio_Effect_Box.bd" FileRelPathName="ip/Audio_Effect_Box_rst_ps7_0_100M_2/Audio_Effect_Box_rst_ps7_0_100M_2.xci">
-          <Proxy FileSetName="Audio_Effect_Box_rst_ps7_0_100M_2"/>
+        <CompFileExtendedInfo CompFileName="Audio_Effect_Box.bd" FileRelPathName="ip/Audio_Effect_Box_axi_apb_bridge_0_0/Audio_Effect_Box_axi_apb_bridge_0_0.xci">
+          <Proxy FileSetName="Audio_Effect_Box_axi_apb_bridge_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Audio_Effect_Box.bd" FileRelPathName="ip/Audio_Effect_Box_i2s_transmitter_0_1/Audio_Effect_Box_i2s_transmitter_0_1.xci">
+          <Proxy FileSetName="Audio_Effect_Box_i2s_transmitter_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Audio_Effect_Box.bd" FileRelPathName="ip/Audio_Effect_Box_processing_system7_0_0/Audio_Effect_Box_processing_system7_0_0.xci">
+          <Proxy FileSetName="Audio_Effect_Box_processing_system7_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/Audio_Effect_Box/hdl/Audio_Effect_Box_wrapper.vhd">
@@ -183,6 +204,12 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="Audio_Effect_Box_axi_apb_bridge_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Audio_Effect_Box_axi_apb_bridge_0_0" RelGenDir="$PGENDIR/Audio_Effect_Box_axi_apb_bridge_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Audio_Effect_Box_axi_apb_bridge_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -264,6 +291,16 @@
       <RQSFiles/>
     </Run>
     <Run Id="Audio_Effect_Box_axi_iic_0_0_synth_1" Type="Ft3:Synth" SrcSet="Audio_Effect_Box_axi_iic_0_0" Part="xc7z020clg400-1" ConstrsSet="Audio_Effect_Box_axi_iic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Audio_Effect_Box_axi_iic_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.srcs/utils_1/imports/Audio_Effect_Box_axi_iic_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Audio_Effect_Box_axi_apb_bridge_0_0_synth_1" Type="Ft3:Synth" SrcSet="Audio_Effect_Box_axi_apb_bridge_0_0" Part="xc7z020clg400-1" ConstrsSet="Audio_Effect_Box_axi_apb_bridge_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Audio_Effect_Box_axi_apb_bridge_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Audio_Effect_Box_axi_apb_bridge_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -377,6 +414,23 @@
       <RQSFiles/>
     </Run>
     <Run Id="Audio_Effect_Box_axi_iic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Audio_Effect_Box_axi_iic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Audio_Effect_Box_axi_iic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../Quinaux/Desktop/Projet/Audio-Effect-Box/Audio_Effect_Box.srcs/utils_1/imports/Audio_Effect_Box_axi_iic_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Audio_Effect_Box_axi_apb_bridge_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Audio_Effect_Box_axi_apb_bridge_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Audio_Effect_Box_axi_apb_bridge_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Audio_Effect_Box_axi_apb_bridge_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>

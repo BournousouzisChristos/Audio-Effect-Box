@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1619022742">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1619623755">
   <File Type="PA-TCL" Name="Audio_Effect_Box_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Audio_Effect_Box_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Audio_Effect_Box_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="Audio_Effect_Box_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="Audio_Effect_Box_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Audio_Effect_Box_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Audio_Effect_Box_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Audio_Effect_Box_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Audio_Effect_Box_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/src/apb_slave.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/Audio_Effect_Box/Audio_Effect_Box.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -55,7 +58,10 @@
   <BlockFileSet Type="BlockSrcs" Name="Audio_Effect_Box_i2s_receiver_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="Audio_Effect_Box_rst_ps7_0_100M_2"/>
   <BlockFileSet Type="BlockSrcs" Name="Audio_Effect_Box_i2s_transmitter_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="Audio_Effect_Box_axi_apb_bridge_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Audio_Effect_Box_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Audio_Effect_Box_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Audio_Effect_Box_axi_iic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Audio_Effect_Box_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Audio_Effect_Box_rtl_top_0_0"/>
 </GenRun>

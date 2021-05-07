@@ -27,7 +27,19 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Audio_Effec
 # IP: bd/Audio_Effect_Box/ip/Audio_Effect_Box_axi_iic_0_0/Audio_Effect_Box_axi_iic_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Audio_Effect_Box_axi_iic_0_0 || ORIG_REF_NAME==Audio_Effect_Box_axi_iic_0_0} -quiet] -quiet
 
+# IP: bd/Audio_Effect_Box/ip/Audio_Effect_Box_ila_0_0/Audio_Effect_Box_ila_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Audio_Effect_Box_ila_0_0 || ORIG_REF_NAME==Audio_Effect_Box_ila_0_0} -quiet] -quiet
+
+# IP: bd/Audio_Effect_Box/ip/Audio_Effect_Box_xlconcat_0_0/Audio_Effect_Box_xlconcat_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Audio_Effect_Box_xlconcat_0_0 || ORIG_REF_NAME==Audio_Effect_Box_xlconcat_0_0} -quiet] -quiet
+
 # IP: bd/Audio_Effect_Box/ip/Audio_Effect_Box_auto_pc_0/Audio_Effect_Box_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Audio_Effect_Box_auto_pc_0 || ORIG_REF_NAME==Audio_Effect_Box_auto_pc_0} -quiet] -quiet
+
+# IP: bd/Audio_Effect_Box/ip/Audio_Effect_Box_rtl_top_0_0/Audio_Effect_Box_rtl_top_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Audio_Effect_Box_rtl_top_0_0 || ORIG_REF_NAME==Audio_Effect_Box_rtl_top_0_0} -quiet] -quiet
+
+# IP: bd/Audio_Effect_Box/ip/Audio_Effect_Box_axi_apb_bridge_0_0/Audio_Effect_Box_axi_apb_bridge_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Audio_Effect_Box_axi_apb_bridge_0_0 || ORIG_REF_NAME==Audio_Effect_Box_axi_apb_bridge_0_0} -quiet] -quiet
 
 # XDC: c:/Users/Christos/Desktop/Projet/Audio_Effect_Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/Audio_Effect_Box_ooc.xdc

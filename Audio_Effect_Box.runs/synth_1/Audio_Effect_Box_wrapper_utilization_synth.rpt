@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Apr 21 18:34:31 2021
+| Date         : Wed Apr 28 17:33:05 2021
 | Host         : LAPTOP-97RQG6MA running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Audio_Effect_Box_wrapper_utilization_synth.rpt -pb Audio_Effect_Box_wrapper_utilization_synth.pb
 | Design       : Audio_Effect_Box_wrapper
@@ -159,11 +159,14 @@ Table of Contents
 |                 Ref Name                | Used |
 +-----------------------------------------+------+
 | Audio_Effect_Box_xbar_0                 |    1 |
+| Audio_Effect_Box_rtl_top_0_0            |    1 |
 | Audio_Effect_Box_rst_ps7_0_100M_2       |    1 |
 | Audio_Effect_Box_processing_system7_0_0 |    1 |
+| Audio_Effect_Box_ila_0_0                |    1 |
 | Audio_Effect_Box_i2s_transmitter_0_1    |    1 |
 | Audio_Effect_Box_i2s_receiver_0_1       |    1 |
 | Audio_Effect_Box_axi_iic_0_0            |    1 |
+| Audio_Effect_Box_axi_apb_bridge_0_0     |    1 |
 | Audio_Effect_Box_auto_pc_0              |    1 |
 +-----------------------------------------+------+
 

@@ -98,7 +98,12 @@ set_property used_in_implementation false [get_files -all c:/Users/Christos/Desk
 set_property used_in_implementation false [get_files -all c:/Users/Christos/Desktop/Projet/Audio_Effect_Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_rst_ps7_0_100M_2/Audio_Effect_Box_rst_ps7_0_100M_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Christos/Desktop/Projet/Audio_Effect_Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_axi_iic_0_0/Audio_Effect_Box_axi_iic_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Christos/Desktop/Projet/Audio_Effect_Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_axi_iic_0_0/Audio_Effect_Box_axi_iic_0_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Users/Christos/Desktop/Projet/Audio_Effect_Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Christos/Desktop/Projet/Audio_Effect_Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Christos/Desktop/Projet/Audio_Effect_Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_ila_0_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Christos/Desktop/Projet/Audio_Effect_Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_ila_0_0/Audio_Effect_Box_ila_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Christos/Desktop/Projet/Audio_Effect_Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_auto_pc_0/Audio_Effect_Box_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Christos/Desktop/Projet/Audio_Effect_Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/ip/Audio_Effect_Box_axi_apb_bridge_0_0/Audio_Effect_Box_axi_apb_bridge_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Christos/Desktop/Projet/Audio_Effect_Box/Audio_Effect_Box.gen/sources_1/bd/Audio_Effect_Box/Audio_Effect_Box_ooc.xdc]
 
 OPTRACE "Adding files" END { }
