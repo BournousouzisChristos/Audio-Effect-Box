@@ -27,14 +27,20 @@ type FIR is (Idle, Filter, Output);
 signal state : FIR := Idle;
 
 type ram_type is array (1023 downto 0) of std_logic_vector(24 downto 0);
+type buffer is array (1023 downto 0) of std_logic_vector(32 downto 0);
 
 shared variable RAM_Left : ram_type;
 shared variable RAM_Right : ram_type;
 
+shared variable Circular_Buffer : buffer;
+
 signal current_data : std_logic_vector(23 downto 0);
 signal old_data : std_logic_vector(23 downto 0);
---signal counter : std_logic_vector(9 downto 0);
 signal accumulator : std_logic_vector(66 downto 0);
+signal counter : std_logic_vector(9 downto 0);
+
+signal data_out : std_logic_vector(31 downto 0);
+signal parity_calc : STD_LOGIC_VECTOR(30 downto 0);
 
 begin
     FIR : process(ACLK)
@@ -52,48 +58,48 @@ begin
 
             when Filter =>
                 S_AXIS_TREADY <= '0';
-                ----------------------
-                -------MAC HERE-------
-                ----------------------
                 ena <= '1';
                 wea <= '0';
                 FOR i IN 0 TO 1023 LOOP
                     addra <= i;
-                    accumulator := accumulator + products(i);                                  
+                    sample <= RAM_Left(conv_integer(i));
+                    accumulator := accumulator + (coeff * sample);                                  
                 END LOOP;
-                --if (counter = x"3FF") then
-                --    state <= Output;
-                --end if;
-                --counter <= counter + '1';
-
+                
             when Output =>
                 S_AXIS_TREADY <= '0';
                 M_AXIS_TVALID <= '1';
                 if (M_AXIS_TREADY = '1') then
-                    M_AXIS_TDATA <= SOMETHING; --HERE--
+                    data_out(27 downto 4) <= SOMETHING;
+                    parity_calc(0) <= '0';              
+                    parity_logic: FOR i IN 0 to 30 GENERATE
+                        parity_calc(i+1) <= parity_calc(i) XOR data_out(i);
+                    END GENERATE;
+                    data_out(31) <= parity_calc(30); 
+                    M_AXIS_TDATA <= data_out;
                     state <= Idle;
                 end if;
+
             end case;
         end if;
     end process FIR;
 
-    process(clk)
+    process(ACLK)
         begin
         current_data <= S_AXIS_TDATA(27 downto 4);
         if clk'event and clk = '1' then
             if not(current_data and old_data) then
-                RAM(conv_integer(addra)) := dia;
+                if S_AXIS_TDATA(30) = '1' then
+                    RAM_Left(conv_integer(counter)) := current_data;
+                else
+                    RAM_Right(conv_integer(counter)) := current_data;
+                end if;
             end if;
         end if;
         old_data <= current_data;
-    end process;
-
-    process(clk)
-        begin
-        if clk'event and clk = '1' then
-            if enb = '1' then
-                sampling <= RAM(conv_integer(addrb));
-            end if;
+        counter <= counter + '1';
+        if counter = x"400" then
+            counter <= "0";
         end if;
     end process;
 

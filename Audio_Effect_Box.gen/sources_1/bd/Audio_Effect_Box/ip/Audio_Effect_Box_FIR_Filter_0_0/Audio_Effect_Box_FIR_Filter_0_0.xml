@@ -537,7 +537,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>dia</spirit:name>
+        <spirit:name>coeff</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>

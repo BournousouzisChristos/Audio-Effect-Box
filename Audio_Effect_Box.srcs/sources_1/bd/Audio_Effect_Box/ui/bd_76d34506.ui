@@ -1,8 +1,8 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_Layers":"/processing_system7_0_FCLK_CLK0:true|/processing_system7_0_FCLK_CLK1:true|/rst_ps7_0_100M_peripheral_aresetn:true|/processing_system7_0_FCLK_RESET0_N:true|",
-   "Default View_ScaleFactor":"0.577686",
-   "Default View_TopLeft":"-81,3",
+   "Default View_ScaleFactor":"0.641322",
+   "Default View_TopLeft":"-401,0",
    "Display-PortTypeClock":"true",
    "Display-PortTypeOthers":"true",
    "Display-PortTypeReset":"true",
@@ -12,54 +12,54 @@
    "Interfaces View_TopLeft":"-263,0",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 5 -x 1590 -y 1010 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 1590 -y 1040 -defaultsOSRD
-preplace port audio_i2c -pg 1 -lvl 5 -x 1590 -y 860 -defaultsOSRD
-preplace port au_dout_r -pg 1 -lvl 5 -x 1590 -y 550 -defaultsOSRD
-preplace port au_din_r -pg 1 -lvl 5 -x 1590 -y 790 -defaultsOSRD -right
-preplace port au_bclk_r -pg 1 -lvl 5 -x 1590 -y 610 -defaultsOSRD
-preplace port au_mclk_r -pg 1 -lvl 5 -x 1590 -y 1120 -defaultsOSRD
-preplace port au_wclk_r -pg 1 -lvl 5 -x 1590 -y 580 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 3 -x 1000 -y 1080 -defaultsOSRD
-preplace inst i2s_receiver_0 -pg 1 -lvl 3 -x 1000 -y 520 -defaultsOSRD
-preplace inst i2s_transmitter_0 -pg 1 -lvl 3 -x 1000 -y 200 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 590 -y 660 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 1640 -y 1020 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1640 -y 1040 -defaultsOSRD
+preplace port audio_i2c -pg 1 -lvl 5 -x 1640 -y 860 -defaultsOSRD
+preplace port au_dout_r -pg 1 -lvl 5 -x 1640 -y 550 -defaultsOSRD
+preplace port au_din_r -pg 1 -lvl 5 -x 1640 -y 790 -defaultsOSRD -right
+preplace port au_bclk_r -pg 1 -lvl 5 -x 1640 -y 590 -defaultsOSRD
+preplace port au_mclk_r -pg 1 -lvl 5 -x 1640 -y 1120 -defaultsOSRD
+preplace port au_wclk_r -pg 1 -lvl 5 -x 1640 -y 570 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 3 -x 1040 -y 1080 -defaultsOSRD
+preplace inst i2s_receiver_0 -pg 1 -lvl 3 -x 1040 -y 520 -defaultsOSRD
+preplace inst i2s_transmitter_0 -pg 1 -lvl 3 -x 1040 -y 200 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 600 -y 660 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 250 -y 490 -defaultsOSRD
-preplace inst axi_iic_0 -pg 1 -lvl 3 -x 1000 -y 880 -defaultsOSRD
-preplace inst axi_apb_bridge_0 -pg 1 -lvl 3 -x 1000 -y 710 -defaultsOSRD
+preplace inst axi_iic_0 -pg 1 -lvl 3 -x 1040 -y 880 -defaultsOSRD
+preplace inst axi_apb_bridge_0 -pg 1 -lvl 3 -x 1040 -y 710 -defaultsOSRD
 preplace inst rams_tdp_rf_rf_0 -pg 1 -lvl 1 -x 250 -y 200 -defaultsOSRD
-preplace inst apb_slave_0 -pg 1 -lvl 4 -x 1400 -y 460 -defaultsOSRD
-preplace inst FIR_Filter_0 -pg 1 -lvl 2 -x 590 -y 160 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 4 70 390 NJ 390 NJ 390 1200
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 40 370 420 70 750 380 1210
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 430 250 780
-preplace netloc i2s_transmitter_0_sdata_0_out 1 3 2 NJ 210 1570J
-preplace netloc i2s_receiver_0_sclk_out 1 2 3 810 370 1230 570 1550J
-preplace netloc i2s_receiver_0_lrclk_out 1 2 3 800 360 1240 580 NJ
+preplace inst FIR_Filter_0 -pg 1 -lvl 2 -x 600 -y 160 -defaultsOSRD
+preplace inst apb_slave_0 -pg 1 -lvl 4 -x 1440 -y 460 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 4 80 380 NJ 380 NJ 380 1260
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 40 370 420 70 780 370 1270
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 430 250 810
+preplace netloc i2s_transmitter_0_sdata_0_out 1 3 2 NJ 210 1620J
+preplace netloc i2s_receiver_0_sclk_out 1 2 3 840 350 1300 560 1600J
+preplace netloc i2s_receiver_0_lrclk_out 1 2 3 830 360 1290 570 NJ
 preplace netloc processing_system7_0_FCLK_CLK1 1 3 2 NJ 1120 NJ
-preplace netloc rst_ps7_0_50M_peripheral_reset 1 1 2 440 480 790
-preplace netloc sdata_0_in_0_1 1 2 3 810 790 NJ 790 NJ
-preplace netloc apb_slave_0_enb 1 0 5 60 30 NJ 30 750J 0 NJ 0 1550
-preplace netloc apb_slave_0_addrb 1 0 5 70 350 NJ 350 NJ 350 NJ 350 1530
-preplace netloc apb_slave_0_dib 1 0 5 30 10 NJ 10 NJ 10 NJ 10 1560
-preplace netloc FIR_Filter_0_ena 1 0 3 50 20 NJ 20 730
-preplace netloc FIR_Filter_0_wea 1 0 3 60 360 NJ 360 730
-preplace netloc FIR_Filter_0_addra 1 0 3 20 0 NJ 0 740
-preplace netloc apb_slave_0_web 1 0 5 70 40 NJ 40 NJ 40 NJ 40 1540
+preplace netloc rst_ps7_0_50M_peripheral_reset 1 1 2 440 480 820
+preplace netloc sdata_0_in_0_1 1 2 3 840 790 NJ 790 NJ
+preplace netloc apb_slave_0_enb 1 0 5 80 30 NJ 30 NJ 30 NJ 30 1580
+preplace netloc apb_slave_0_addrb 1 0 5 20 10 NJ 10 NJ 10 NJ 10 1600
+preplace netloc apb_slave_0_dib 1 0 5 30 20 NJ 20 NJ 20 NJ 20 1590
+preplace netloc FIR_Filter_0_ena 1 0 3 60 350 NJ 350 760
+preplace netloc FIR_Filter_0_wea 1 0 3 50 0 NJ 0 770
+preplace netloc FIR_Filter_0_addra 1 0 3 80 360 NJ 360 750
+preplace netloc apb_slave_0_web 1 0 5 70 40 NJ 40 780J 0 NJ 0 1610
 preplace netloc rams_tdp_rf_rf_0_doa 1 1 1 N 190
-preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 760 110n
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 3 450 390 NJ 390 1240
+preplace netloc processing_system7_0_FIXED_IO 1 3 2 NJ 1040 NJ
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 800 450n
+preplace netloc processing_system7_0_DDR 1 3 2 NJ 1020 NJ
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 800 670n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 790 110n
 preplace netloc ps7_0_axi_periph_M03_AXI 1 2 1 N 690
 preplace netloc axi_iic_0_IIC 1 3 2 NJ 860 NJ
-preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 760 670n
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 770 450n
-preplace netloc processing_system7_0_FIXED_IO 1 3 2 NJ 1040 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 3 440 840 810J 800 1190
-preplace netloc processing_system7_0_DDR 1 3 2 1230J 1010 NJ
-preplace netloc axi_apb_bridge_0_APB_M 1 3 1 1220 440n
-preplace netloc i2s_receiver_0_m_axis_aud 1 1 3 440 50 NJ 50 1190
+preplace netloc i2s_receiver_0_m_axis_aud 1 1 3 450 50 NJ 50 1250
+preplace netloc axi_apb_bridge_0_APB_M 1 3 1 1280 440n
 preplace netloc FIR_Filter_0_M_AXIS 1 2 1 N 130
-levelinfo -pg 1 0 250 590 1000 1400 1590
-pagesize -pg 1 -db -bbox -sgen 0 -10 1710 1210
+levelinfo -pg 1 0 250 600 1040 1440 1640
+pagesize -pg 1 -db -bbox -sgen 0 -10 1760 1210
 "
 }
 {
